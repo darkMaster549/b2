@@ -1,9 +1,3 @@
--- This Script is Part of the Prometheus Obfuscator by Levno_710
---
--- pipeline.lua
---
--- This Script Provides some configuration presets
-
 return {
     ["Minify"] = {
         -- The default LuaVersion is Lua51
@@ -35,17 +29,17 @@ return {
         -- Obfuscation steps
         Steps = {
             {
-                Name = "Vmify";
-                Settings = {
-                    
-                };
-            },
-            {
                 Name = "ConstantArray";
                 Settings = {
                     Treshold    = 1;
                     StringsOnly = true;
                 }
+            },
+            {
+                Name = "Vmify";
+                Settings = {
+
+                };
             },
             {
                 Name = "WrapInFunction";
@@ -81,12 +75,6 @@ return {
                 };
             },
             {
-                Name = "Vmify";
-                Settings = {
-                    
-                };
-            },
-            {
                 Name = "ConstantArray";
                 Settings = {
                     Treshold    = 1;
@@ -95,6 +83,12 @@ return {
                     Rotate      = true;
                     LocalWrapperTreshold = 0;
                 }
+            },
+            {
+                Name = "Vmify";
+                Settings = {
+                    
+                };
             },
             {
                 Name = "NumbersToExpressions";
@@ -124,12 +118,6 @@ return {
         -- Obfuscation steps
         Steps = {
             {
-                Name = "Vmify";
-                Settings = {
-                    
-                };
-            },
-            {
                 Name = "EncryptStrings";
                 Settings = {
 
@@ -140,6 +128,16 @@ return {
                 Settings = {
 
                 };
+            },
+            {
+                Name = "ConstantArray";
+                Settings = {
+                    Treshold    = 1;
+                    StringsOnly = true;
+                    Shuffle     = true;
+                    Rotate      = true;
+                    LocalWrapperTreshold = 0;
+                }
             },
             {
                 Name = "Vmify";
@@ -156,6 +154,12 @@ return {
                     Rotate      = true;
                     LocalWrapperTreshold = 0;
                 }
+            },
+            {
+                Name = "Vmify";
+                Settings = {
+                    
+                };
             },
             {
                 Name = "NumbersToExpressions";
